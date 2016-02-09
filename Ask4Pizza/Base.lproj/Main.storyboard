@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pizza_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gL-GS-BvF">
+                                <rect key="frame" x="233" y="137" width="135" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Tamaño">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Wq3-Ng-UWf" kind="show" identifier="tamanoPizza" id="BeK-2i-idQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1n-RM-7D1">
+                                <rect key="frame" x="252" y="204" width="97" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Masa">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IEs-T0-bsK" kind="show" identifier="tipoMasa" id="Dru-tl-eiR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMN-ez-FoT">
+                                <rect key="frame" x="257" y="371" width="86" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eN0-7N-u1I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Ingredientes">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZDL-Em-6dg" kind="show" identifier="tipoIngredientes" id="gwH-kk-ZpM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zh0-vv-4Jp">
+                                <rect key="frame" x="249" y="288" width="103" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Queso">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Yjm-Ii-iFh" kind="show" identifier="tipoQueso" id="0j6-1E-n42"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n9P-av-Nf6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="123"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Selecciona las opciones para tu pizza" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skx-hN-uG5">
+                                        <rect key="frame" x="160" y="25" width="280" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Skx-hN-uG5" secondAttribute="height" multiplier="80:7" id="09Z-17-eok"/>
+                                            <constraint firstAttribute="width" constant="280" id="oty-oq-Pbz"/>
+                                            <constraint firstAttribute="width" constant="280" id="pFm-0h-bB2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="09Z-17-eok"/>
+                                                <exclude reference="oty-oq-Pbz"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="123" id="1fB-zY-9k5"/>
+                                    <constraint firstItem="Skx-hN-uG5" firstAttribute="top" secondItem="n9P-av-Nf6" secondAttribute="top" constant="25" id="7Eh-rt-bhe"/>
+                                    <constraint firstAttribute="height" constant="92" id="KyQ-Eo-DVD"/>
+                                    <constraint firstItem="Skx-hN-uG5" firstAttribute="centerX" secondItem="n9P-av-Nf6" secondAttribute="centerX" id="fR3-VR-k1c"/>
+                                    <constraint firstItem="Skx-hN-uG5" firstAttribute="centerY" secondItem="n9P-av-Nf6" secondAttribute="centerY" constant="-16" id="hDF-Es-FVp"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1fB-zY-9k5"/>
+                                        <exclude reference="KyQ-Eo-DVD"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7v-QB-tYN">
+                                <rect key="frame" x="192" y="479" width="216" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
+                                <state key="normal" title="Pedido">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnConfirmacion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gYW-Jk-hvh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="t1n-RM-7D1" firstAttribute="top" secondItem="7gL-GS-BvF" secondAttribute="bottom" constant="34" id="2Yf-Bo-fNW"/>
+                            <constraint firstItem="dMN-ez-FoT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4YO-NA-lEj"/>
+                            <constraint firstItem="t1n-RM-7D1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DMS-Zj-asb"/>
+                            <constraint firstItem="zh0-vv-4Jp" firstAttribute="top" secondItem="t1n-RM-7D1" secondAttribute="bottom" constant="51" id="EsQ-5Y-RQ2"/>
+                            <constraint firstItem="7gL-GS-BvF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HB2-Fn-4If"/>
+                            <constraint firstItem="n9P-av-Nf6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I0H-43-458"/>
+                            <constraint firstAttribute="trailing" secondItem="n9P-av-Nf6" secondAttribute="trailing" id="K3G-rQ-Ve0"/>
+                            <constraint firstItem="7gL-GS-BvF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="137" id="Scw-Ka-UGw"/>
+                            <constraint firstItem="zh0-vv-4Jp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SpJ-BU-6JE"/>
+                            <constraint firstItem="n9P-av-Nf6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="XFN-ho-kfd"/>
+                            <constraint firstItem="n9P-av-Nf6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hEI-hj-dw5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b7v-QB-tYN" secondAttribute="bottom" constant="6" id="jrr-d3-iv9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b7v-QB-tYN" secondAttribute="bottom" constant="6" id="jvb-ts-8yB"/>
+                            <constraint firstItem="dMN-ez-FoT" firstAttribute="top" secondItem="zh0-vv-4Jp" secondAttribute="bottom" constant="50" id="kDS-DL-pVr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b7v-QB-tYN" secondAttribute="bottom" constant="86" id="oft-XJ-pav"/>
+                            <constraint firstItem="b7v-QB-tYN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pjA-dC-RoD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jrr-d3-iv9"/>
+                                <exclude reference="jvb-ts-8yB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="9AX-Qt-aD7"/>
+                    <connections>
+                        <outlet property="tamanoLabel" destination="7gL-GS-BvF" id="rRW-Yc-2BC"/>
+                        <segue destination="YD0-e0-Mbk" kind="show" identifier="etapaConfirmacion" id="Bse-2y-2yf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1272" y="360"/>
+        </scene>
+        <!--View Controller Ingredientes-->
+        <scene sceneID="K7G-Qe-zT5">
+            <objects>
+                <viewController id="ZDL-Em-6dg" userLabel="View Controller Ingredientes" customClass="ViewIngredientesController" customModule="pizza_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HfJ-xm-fjK"/>
+                        <viewControllerLayoutGuide type="bottom" id="az1-VD-hCO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UHa-Hc-gN9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQD-vY-D7p">
+                                <rect key="frame" x="0.0" y="193" width="172" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="Qr5-cK-Bhp"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrediente 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rud-bh-i0a">
+                                <rect key="frame" x="20" y="315" width="89" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrediente 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfE-Kb-ger">
+                                <rect key="frame" x="20" y="167" width="89" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="d7S-Yf-e1z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyS-vo-wxU">
+                                <rect key="frame" x="20" y="341" width="152" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="51R-oP-OAd"/>
+                                    <constraint firstAttribute="height" constant="65" id="gh7-cl-V6f"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrediente 3:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUe-KX-sPa">
+                                <rect key="frame" x="491" y="164" width="89" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="afF-kb-r8T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c80-jE-v0I">
+                                <rect key="frame" x="408" y="193" width="192" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="BYC-EH-G0n"/>
+                                </constraints>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UgZ-5D-FNO">
+                                <rect key="frame" x="408" y="341" width="192" height="65"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrediente 4:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2O-Vm-aad">
+                                <rect key="frame" x="496" y="315" width="89" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="Cv1-za-5Mx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Zo-S9-x6k">
+                                <rect key="frame" x="0.0" y="450" width="600" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="EDq-cP-Sw8"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEr-fH-Adp">
+                                <rect key="frame" x="246" y="547" width="108" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="88I-uM-D6B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Seleccionar"/>
+                                <connections>
+                                    <action selector="btnAceptar:" destination="ZDL-Em-6dg" eventType="touchUpInside" id="gwE-QW-YmY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrediente 5:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6Q-GB-9Mh">
+                                <rect key="frame" x="265" y="424" width="89" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ingredientes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEm-jh-LTk">
+                                <rect key="frame" x="264" y="56" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bt4-QB-nb5"/>
+                                    <constraint firstAttribute="width" constant="90" id="qDx-HD-QSx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Selecciona hasta 5 ingredientes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIS-ew-WVT">
+                                <rect key="frame" x="209" y="85" width="200" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="6th-20-hVU"/>
+                                    <constraint firstAttribute="width" constant="200" id="zla-nP-uUY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cC-kX-wfp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="cCs-H5-SIk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="L2O-Vm-aad" firstAttribute="baseline" secondItem="rud-bh-i0a" secondAttribute="firstBaseline" id="7KN-fn-xjM"/>
+                            <constraint firstItem="9cC-kX-wfp" firstAttribute="centerX" secondItem="UHa-Hc-gN9" secondAttribute="centerX" id="8yN-H0-vI4"/>
+                            <constraint firstItem="ZIS-ew-WVT" firstAttribute="centerX" secondItem="UHa-Hc-gN9" secondAttribute="centerX" constant="9" id="C2t-cX-k33"/>
+                            <constraint firstItem="9cC-kX-wfp" firstAttribute="top" secondItem="UHa-Hc-gN9" secondAttribute="topMargin" id="CNG-RT-8ZM"/>
+                            <constraint firstItem="UgZ-5D-FNO" firstAttribute="trailing" secondItem="5Zo-S9-x6k" secondAttribute="trailing" id="HG4-0z-nl6"/>
+                            <constraint firstItem="qyS-vo-wxU" firstAttribute="leading" secondItem="UHa-Hc-gN9" secondAttribute="leadingMargin" id="Hk5-2W-5ip"/>
+                            <constraint firstItem="UgZ-5D-FNO" firstAttribute="top" secondItem="qyS-vo-wxU" secondAttribute="top" id="ITe-Bq-tlC"/>
+                            <constraint firstItem="qyS-vo-wxU" firstAttribute="leading" secondItem="rud-bh-i0a" secondAttribute="leading" id="Jsw-DK-NkZ"/>
+                            <constraint firstItem="rud-bh-i0a" firstAttribute="baseline" secondItem="L2O-Vm-aad" secondAttribute="baseline" id="Jxh-V1-Gue"/>
+                            <constraint firstItem="c80-jE-v0I" firstAttribute="bottom" secondItem="MQD-vY-D7p" secondAttribute="bottom" id="K9r-5P-ELx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9cC-kX-wfp" secondAttribute="trailing" constant="-20" id="Utf-PP-gdH"/>
+                            <constraint firstItem="5Zo-S9-x6k" firstAttribute="top" secondItem="UgZ-5D-FNO" secondAttribute="bottom" constant="44" id="V5m-Qz-KYi"/>
+                            <constraint firstItem="JEr-fH-Adp" firstAttribute="top" secondItem="5Zo-S9-x6k" secondAttribute="bottom" constant="32" id="Vru-nQ-MPN"/>
+                            <constraint firstItem="c80-jE-v0I" firstAttribute="top" secondItem="fUe-KX-sPa" secondAttribute="bottom" constant="11" id="WpX-lZ-mlC"/>
+                            <constraint firstItem="c80-jE-v0I" firstAttribute="leading" secondItem="UgZ-5D-FNO" secondAttribute="leading" id="XFc-xq-Nk4"/>
+                            <constraint firstItem="KEm-jh-LTk" firstAttribute="centerX" secondItem="UHa-Hc-gN9" secondAttribute="centerX" constant="9" id="Y57-Uj-Efs"/>
+                            <constraint firstItem="fUe-KX-sPa" firstAttribute="trailing" secondItem="UHa-Hc-gN9" secondAttribute="trailingMargin" id="ZOa-cg-NY3"/>
+                            <constraint firstItem="5Zo-S9-x6k" firstAttribute="top" secondItem="f6Q-GB-9Mh" secondAttribute="bottom" constant="8" symbolic="YES" id="Zac-0w-unN"/>
+                            <constraint firstItem="rud-bh-i0a" firstAttribute="leading" secondItem="lfE-Kb-ger" secondAttribute="leading" id="aVm-zh-U2k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L2O-Vm-aad" secondAttribute="trailing" constant="-5" id="cDL-To-6qM"/>
+                            <constraint firstItem="qyS-vo-wxU" firstAttribute="trailing" secondItem="MQD-vY-D7p" secondAttribute="trailing" id="drG-GT-GfL"/>
+                            <constraint firstItem="9cC-kX-wfp" firstAttribute="leading" secondItem="UHa-Hc-gN9" secondAttribute="leadingMargin" constant="-20" id="dt3-w1-yjM"/>
+                            <constraint firstItem="qyS-vo-wxU" firstAttribute="bottom" secondItem="UgZ-5D-FNO" secondAttribute="bottom" id="gao-8f-XZs"/>
+                            <constraint firstItem="qyS-vo-wxU" firstAttribute="top" secondItem="rud-bh-i0a" secondAttribute="bottom" constant="8" symbolic="YES" id="hLm-Lk-LdD"/>
+                            <constraint firstItem="c80-jE-v0I" firstAttribute="top" secondItem="MQD-vY-D7p" secondAttribute="top" id="jwj-Lu-UeS"/>
+                            <constraint firstItem="MQD-vY-D7p" firstAttribute="top" secondItem="lfE-Kb-ger" secondAttribute="bottom" constant="8" symbolic="YES" id="qse-2P-RFu"/>
+                            <constraint firstItem="f6Q-GB-9Mh" firstAttribute="leading" secondItem="UHa-Hc-gN9" secondAttribute="leading" constant="265" id="tEN-o6-yxj"/>
+                            <constraint firstItem="MQD-vY-D7p" firstAttribute="leading" secondItem="5Zo-S9-x6k" secondAttribute="leading" id="tXp-lq-uOh"/>
+                            <constraint firstItem="JEr-fH-Adp" firstAttribute="centerX" secondItem="5Zo-S9-x6k" secondAttribute="centerX" id="uSm-Df-BYn"/>
+                            <constraint firstItem="5Zo-S9-x6k" firstAttribute="leading" secondItem="UHa-Hc-gN9" secondAttribute="leading" id="vhz-o5-j8z"/>
+                            <constraint firstItem="c80-jE-v0I" firstAttribute="trailing" secondItem="UgZ-5D-FNO" secondAttribute="trailing" id="vny-nY-CEB"/>
+                            <constraint firstItem="az1-VD-hCO" firstAttribute="top" secondItem="JEr-fH-Adp" secondAttribute="bottom" constant="20" id="vvy-TA-T96"/>
+                            <constraint firstAttribute="trailing" secondItem="5Zo-S9-x6k" secondAttribute="trailing" id="xlQ-8H-NVK"/>
+                            <constraint firstItem="rud-bh-i0a" firstAttribute="trailing" secondItem="lfE-Kb-ger" secondAttribute="trailing" id="xtR-Nb-LtC"/>
+                            <constraint firstItem="rud-bh-i0a" firstAttribute="top" secondItem="MQD-vY-D7p" secondAttribute="bottom" constant="57" id="ybS-Su-YRx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ingredienteSelector1" destination="MQD-vY-D7p" id="ftR-o7-91Z"/>
+                        <outlet property="ingredienteSelector2" destination="qyS-vo-wxU" id="xgf-AD-1wo"/>
+                        <outlet property="ingredienteSelector3" destination="c80-jE-v0I" id="jGm-o4-Of7"/>
+                        <outlet property="ingredienteSelector4" destination="UgZ-5D-FNO" id="2PT-d6-gM5"/>
+                        <outlet property="ingredienteSelector5" destination="5Zo-S9-x6k" id="uzN-F9-IBv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sQs-zK-OOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066" y="1136"/>
+        </scene>
+        <!--ViewTamanoMasaController-->
+        <scene sceneID="T8J-Q8-GhH">
+            <objects>
+                <viewController id="IEs-T0-bsK" userLabel="ViewTamanoMasaController" customClass="ViewTipoMasaController" customModule="pizza_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ype-T0-uXG"/>
+                        <viewControllerLayoutGuide type="bottom" id="AJX-Nt-dBi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cKI-7k-N1a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F66-eV-efy">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="123"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delgada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bct-Nt-e1f">
+                                        <rect key="frame" x="275" y="83" width="50" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="Egf-ES-X5B"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Egf-ES-X5B"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de la masa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIh-hv-hxV">
+                                        <rect key="frame" x="242" y="51" width="117" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SIh-hv-hxV" firstAttribute="centerX" secondItem="F66-eV-efy" secondAttribute="centerX" id="0k1-d9-5QR"/>
+                                    <constraint firstItem="SIh-hv-hxV" firstAttribute="top" secondItem="F66-eV-efy" secondAttribute="top" constant="51" id="456-d9-RRV"/>
+                                    <constraint firstAttribute="height" constant="123" id="JSz-E1-29j"/>
+                                    <constraint firstItem="SIh-hv-hxV" firstAttribute="centerY" secondItem="bct-Nt-e1f" secondAttribute="centerY" constant="-30" id="fmG-Ml-5pR"/>
+                                    <constraint firstItem="SIh-hv-hxV" firstAttribute="centerY" secondItem="F66-eV-efy" secondAttribute="centerY" id="mr8-OB-WAI"/>
+                                    <constraint firstItem="SIh-hv-hxV" firstAttribute="centerX" secondItem="bct-Nt-e1f" secondAttribute="centerX" id="n3v-hH-3A1"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jk9-GZ-1uS">
+                                <rect key="frame" x="140" y="192" width="320" height="216"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cT-xX-AYi">
+                                <rect key="frame" x="248" y="515" width="105" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Seleccionar">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAceptar:" destination="IEs-T0-bsK" eventType="touchUpInside" id="8j5-jn-Icn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="F66-eV-efy" secondAttribute="trailing" id="44B-rh-MXZ"/>
+                            <constraint firstItem="F66-eV-efy" firstAttribute="top" secondItem="cKI-7k-N1a" secondAttribute="top" id="APP-Hs-d2F"/>
+                            <constraint firstItem="2cT-xX-AYi" firstAttribute="centerX" secondItem="cKI-7k-N1a" secondAttribute="centerX" id="BM2-Da-DWX"/>
+                            <constraint firstItem="AJX-Nt-dBi" firstAttribute="top" secondItem="2cT-xX-AYi" secondAttribute="bottom" constant="52" id="Bxv-c6-bZi"/>
+                            <constraint firstItem="jk9-GZ-1uS" firstAttribute="centerX" secondItem="cKI-7k-N1a" secondAttribute="centerX" id="DKf-f2-DD7"/>
+                            <constraint firstItem="F66-eV-efy" firstAttribute="centerX" secondItem="cKI-7k-N1a" secondAttribute="centerX" id="ECR-15-lvJ"/>
+                            <constraint firstAttribute="trailing" secondItem="F66-eV-efy" secondAttribute="trailing" id="HH1-rl-N27"/>
+                            <constraint firstItem="F66-eV-efy" firstAttribute="leading" secondItem="cKI-7k-N1a" secondAttribute="leading" id="NyM-2K-O8v"/>
+                            <constraint firstItem="F66-eV-efy" firstAttribute="centerX" secondItem="cKI-7k-N1a" secondAttribute="centerX" id="Qlc-vt-Dg4"/>
+                            <constraint firstItem="jk9-GZ-1uS" firstAttribute="centerY" secondItem="cKI-7k-N1a" secondAttribute="centerY" id="Qr3-h4-Zag"/>
+                            <constraint firstAttribute="trailing" secondItem="F66-eV-efy" secondAttribute="trailing" id="Siv-z1-dQi"/>
+                            <constraint firstItem="F66-eV-efy" firstAttribute="top" secondItem="cKI-7k-N1a" secondAttribute="top" id="VSa-QS-AcO"/>
+                            <constraint firstItem="F66-eV-efy" firstAttribute="top" secondItem="cKI-7k-N1a" secondAttribute="top" id="VzV-am-Tqy"/>
+                            <constraint firstItem="jk9-GZ-1uS" firstAttribute="centerX" secondItem="cKI-7k-N1a" secondAttribute="centerX" id="bRt-IL-Gsz"/>
+                            <constraint firstItem="2cT-xX-AYi" firstAttribute="centerX" secondItem="cKI-7k-N1a" secondAttribute="centerX" id="bmZ-UA-VYF"/>
+                            <constraint firstItem="F66-eV-efy" firstAttribute="centerX" secondItem="cKI-7k-N1a" secondAttribute="centerX" id="otb-Do-PPz"/>
+                            <constraint firstItem="jk9-GZ-1uS" firstAttribute="centerY" secondItem="cKI-7k-N1a" secondAttribute="centerY" id="uri-mE-T5Z"/>
+                            <constraint firstItem="F66-eV-efy" firstAttribute="centerX" secondItem="cKI-7k-N1a" secondAttribute="centerX" id="zdf-Pu-WkN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HH1-rl-N27"/>
+                                <exclude reference="Qlc-vt-Dg4"/>
+                                <exclude reference="Siv-z1-dQi"/>
+                                <exclude reference="VSa-QS-AcO"/>
+                                <exclude reference="VzV-am-Tqy"/>
+                                <exclude reference="otb-Do-PPz"/>
+                                <exclude reference="zdf-Pu-WkN"/>
+                                <exclude reference="Qr3-h4-Zag"/>
+                                <exclude reference="bRt-IL-Gsz"/>
+                                <exclude reference="BM2-Da-DWX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tipoMasaLabel" destination="bct-Nt-e1f" id="9bq-6Z-9uF"/>
+                        <outlet property="tipoMasaSelector" destination="jk9-GZ-1uS" id="dDG-vv-Qs2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sZv-wV-X9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2047" y="384"/>
+        </scene>
+        <!--View Tipo Queso Controller-->
+        <scene sceneID="IK8-ej-W0h">
+            <objects>
+                <viewController id="Yjm-Ii-iFh" customClass="ViewTipoQuesoController" customModule="pizza_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jj8-NM-3Mb"/>
+                        <viewControllerLayoutGuide type="bottom" id="LEE-2D-5gg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i1S-bG-CDY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9f8-TJ-jUX">
+                                <rect key="frame" x="0.0" y="192" width="600" height="216"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TB8-bb-e9c">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="123"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tipo de queso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9D-2s-JT1">
+                                        <rect key="frame" x="242" y="51" width="117" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delgada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfr-2I-sV4">
+                                        <rect key="frame" x="275" y="80" width="50" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="fM0-lm-xOk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="fM0-lm-xOk"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Xfr-2I-sV4" firstAttribute="centerX" secondItem="z9D-2s-JT1" secondAttribute="centerX" id="BHw-Xs-5vZ"/>
+                                    <constraint firstAttribute="height" constant="123" id="grx-me-9hF"/>
+                                    <constraint firstItem="Xfr-2I-sV4" firstAttribute="centerX" secondItem="TB8-bb-e9c" secondAttribute="centerX" id="mFy-cZ-Ihp"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xfr-2I-sV4" secondAttribute="bottom" constant="26" id="vUD-qO-Uqe"/>
+                                    <constraint firstItem="Xfr-2I-sV4" firstAttribute="top" secondItem="z9D-2s-JT1" secondAttribute="bottom" constant="8" id="wvm-lU-mYd"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHI-xM-wJ2">
+                                <rect key="frame" x="255" y="511" width="90" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Seleccionar">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAceptar:" destination="Yjm-Ii-iFh" eventType="touchUpInside" id="56g-cx-0Nn"/>
+                                    <action selector="btnAceptar:" destination="IEs-T0-bsK" eventType="touchUpInside" id="hZ3-8c-SqH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9f8-TJ-jUX" firstAttribute="leading" secondItem="i1S-bG-CDY" secondAttribute="leadingMargin" constant="-20" id="6cu-yr-mX1"/>
+                            <constraint firstItem="9f8-TJ-jUX" firstAttribute="centerX" secondItem="i1S-bG-CDY" secondAttribute="centerX" id="83k-lk-BuU"/>
+                            <constraint firstItem="TB8-bb-e9c" firstAttribute="top" secondItem="i1S-bG-CDY" secondAttribute="top" id="AVp-vp-ouR"/>
+                            <constraint firstItem="TB8-bb-e9c" firstAttribute="leading" secondItem="9f8-TJ-jUX" secondAttribute="leading" id="QCl-gM-s4U"/>
+                            <constraint firstItem="SHI-xM-wJ2" firstAttribute="centerX" secondItem="i1S-bG-CDY" secondAttribute="centerX" id="QTM-Oy-uB3"/>
+                            <constraint firstItem="LEE-2D-5gg" firstAttribute="top" secondItem="SHI-xM-wJ2" secondAttribute="bottom" constant="56" id="Qxq-bf-dZg"/>
+                            <constraint firstItem="9f8-TJ-jUX" firstAttribute="centerY" secondItem="i1S-bG-CDY" secondAttribute="centerY" id="fYl-JR-eoh"/>
+                            <constraint firstItem="9f8-TJ-jUX" firstAttribute="top" secondItem="TB8-bb-e9c" secondAttribute="bottom" constant="69" id="iNJ-XY-oy5"/>
+                            <constraint firstItem="TB8-bb-e9c" firstAttribute="trailing" secondItem="9f8-TJ-jUX" secondAttribute="trailing" id="q3o-d0-8BI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9f8-TJ-jUX" secondAttribute="trailing" constant="-20" id="vbw-tS-7dy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tipoQuesoLabel" destination="Xfr-2I-sV4" id="ugV-gd-Mq9"/>
+                        <outlet property="tipoQuesoSelector" destination="9f8-TJ-jUX" id="N85-60-8pd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWS-KO-yPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2054" y="1136"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="htS-yP-zr6">
+            <objects>
+                <viewController id="Wz8-kC-WUS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rfZ-Wo-dAL"/>
+                        <viewControllerLayoutGuide type="bottom" id="yvI-Z2-yxc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h0X-k4-9Mw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oqx-o0-Il5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="123"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LISTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elf-Yt-5xx">
+                                        <rect key="frame" x="226" y="50" width="149" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="149" id="8zi-Ft-zIw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Elf-Yt-5xx" firstAttribute="centerY" secondItem="Oqx-o0-Il5" secondAttribute="centerY" id="9pa-Ju-hnb"/>
+                                    <constraint firstAttribute="height" constant="123" id="EC0-VE-vJU"/>
+                                    <constraint firstItem="Elf-Yt-5xx" firstAttribute="centerX" secondItem="Oqx-o0-Il5" secondAttribute="centerX" id="HNG-2Y-tIS"/>
+                                    <constraint firstItem="Elf-Yt-5xx" firstAttribute="top" secondItem="Oqx-o0-Il5" secondAttribute="top" constant="50" id="SP3-8j-j1O"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1455004494_Chef-2" translatesAutoresizingMaskIntoConstraints="NO" id="GLE-lL-A6i">
+                                <rect key="frame" x="300" y="300" width="0.0" height="0.0"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En breve tu pizza será entregada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCN-CF-bcj">
+                                <rect key="frame" x="159" y="539" width="282" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="TJr-cf-VfY"/>
+                                    <constraint firstAttribute="height" constant="21" id="wXc-Qq-wnx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="GLE-lL-A6i" firstAttribute="centerY" secondItem="h0X-k4-9Mw" secondAttribute="centerY" id="Gmj-8B-A0D"/>
+                            <constraint firstItem="yvI-Z2-yxc" firstAttribute="top" secondItem="tCN-CF-bcj" secondAttribute="bottom" constant="40" id="Ljq-CV-mDq"/>
+                            <constraint firstAttribute="trailing" secondItem="Oqx-o0-Il5" secondAttribute="trailing" id="UHx-Oc-Fi0"/>
+                            <constraint firstItem="tCN-CF-bcj" firstAttribute="centerX" secondItem="GLE-lL-A6i" secondAttribute="centerX" id="UOb-r9-JEk"/>
+                            <constraint firstItem="Oqx-o0-Il5" firstAttribute="top" secondItem="h0X-k4-9Mw" secondAttribute="top" id="X0Q-x9-sgH"/>
+                            <constraint firstItem="Oqx-o0-Il5" firstAttribute="leading" secondItem="h0X-k4-9Mw" secondAttribute="leading" id="fY3-JH-Ia2"/>
+                            <constraint firstItem="GLE-lL-A6i" firstAttribute="centerX" secondItem="h0X-k4-9Mw" secondAttribute="centerX" id="laJ-wY-pCJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCR-30-313" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1268" y="-1131"/>
+        </scene>
+        <!--View Confirmation Controller-->
+        <scene sceneID="z99-aI-JyE">
+            <objects>
+                <viewController id="YD0-e0-Mbk" customClass="ViewConfirmationController" customModule="pizza_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fkK-qK-kxG"/>
+                        <viewControllerLayoutGuide type="bottom" id="HWy-TE-5qZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SvB-3P-zrD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Lg-pZ-eAb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="123"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Confirmación" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH0-yc-ibf">
+                                        <rect key="frame" x="252" y="52" width="97" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CH0-yc-ibf" firstAttribute="centerX" secondItem="3Lg-pZ-eAb" secondAttribute="centerX" id="KXB-gs-Ptb"/>
+                                    <constraint firstItem="CH0-yc-ibf" firstAttribute="centerY" secondItem="3Lg-pZ-eAb" secondAttribute="centerY" id="nh2-BG-LXY"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu pizza contiene:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyq-6a-0UH">
+                                <rect key="frame" x="234" y="167" width="132" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9Hm-fb-Sm9"/>
+                                    <constraint firstAttribute="width" constant="132" id="vXr-ly-zWA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOs-pM-vj4">
+                                <rect key="frame" x="20" y="547" width="156" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Cambiar Ingredientes">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCambiarIngredientes:" destination="YD0-e0-Mbk" eventType="touchUpInside" id="3rh-D1-VA3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delgada , Crujiente , Parmesano , jamon,jamon,jamon,jamon,jamon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy6-IC-Oxq">
+                                <rect key="frame" x="160" y="226" width="280" height="188"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iy6-IC-Oxq" secondAttribute="height" multiplier="70:37" constant="-75.675675675675677" id="3qw-8C-qNP"/>
+                                    <constraint firstAttribute="height" constant="188" id="if7-Wm-h84"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJA-Zb-ipw">
+                                <rect key="frame" x="410" y="539" width="155" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Es lo que quiero">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnEnviarCocina:" destination="YD0-e0-Mbk" eventType="touchUpInside" id="qi6-FD-kAg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3Lg-pZ-eAb" firstAttribute="leading" secondItem="SvB-3P-zrD" secondAttribute="leading" id="0GT-aA-Y6d"/>
+                            <constraint firstItem="3Lg-pZ-eAb" firstAttribute="centerX" secondItem="iyq-6a-0UH" secondAttribute="centerX" id="0c5-zR-Tkn"/>
+                            <constraint firstItem="EJA-Zb-ipw" firstAttribute="trailing" secondItem="SvB-3P-zrD" secondAttribute="trailingMargin" constant="-15" id="74c-iM-iZG"/>
+                            <constraint firstAttribute="bottom" secondItem="bOs-pM-vj4" secondAttribute="bottom" constant="20" symbolic="YES" id="H9g-bl-OSA"/>
+                            <constraint firstItem="iyq-6a-0UH" firstAttribute="top" secondItem="3Lg-pZ-eAb" secondAttribute="bottom" constant="44" id="HO6-kJ-vo9"/>
+                            <constraint firstItem="bOs-pM-vj4" firstAttribute="baseline" secondItem="EJA-Zb-ipw" secondAttribute="baseline" constant="6" id="Mvq-Oe-1pY"/>
+                            <constraint firstItem="3Lg-pZ-eAb" firstAttribute="top" secondItem="SvB-3P-zrD" secondAttribute="top" id="Qms-Oi-R4c"/>
+                            <constraint firstItem="bOs-pM-vj4" firstAttribute="leading" secondItem="SvB-3P-zrD" secondAttribute="leadingMargin" id="Uz3-mJ-Qei"/>
+                            <constraint firstItem="iy6-IC-Oxq" firstAttribute="top" secondItem="iyq-6a-0UH" secondAttribute="bottom" constant="38" id="V9c-Pp-pxw"/>
+                            <constraint firstItem="iyq-6a-0UH" firstAttribute="centerX" secondItem="iy6-IC-Oxq" secondAttribute="centerX" id="cPL-ZR-5Na"/>
+                            <constraint firstItem="iy6-IC-Oxq" firstAttribute="centerY" secondItem="SvB-3P-zrD" secondAttribute="centerY" constant="20" id="h0k-4i-oSX"/>
+                            <constraint firstAttribute="trailing" secondItem="3Lg-pZ-eAb" secondAttribute="trailing" id="oci-Z2-gWD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelSeleccion" destination="iy6-IC-Oxq" id="Pad-Ij-1Kb"/>
+                        <segue destination="Wz8-kC-WUS" kind="show" identifier="enviarCocina" id="JWp-my-K4b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r22-hg-zyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1268" y="-422"/>
+        </scene>
+        <!--ViewTamanoController-->
+        <scene sceneID="sxC-eJ-9pO">
+            <objects>
+                <viewController id="Wq3-Ng-UWf" userLabel="ViewTamanoController" customClass="ViewTamanoController" customModule="pizza_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Bi-4c-46L"/>
+                        <viewControllerLayoutGuide type="bottom" id="HIH-2a-ndg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hsd-oz-Cpo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tamaño de la pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3R-W3-FBg">
+                                <rect key="frame" x="230" y="51" width="141" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFq-Lz-ovW">
+                                <rect key="frame" x="0.0" y="192" width="600" height="216"/>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EmH-Zy-fMA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="123"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCW-O4-Rz8">
+                                        <rect key="frame" x="282" y="83" width="35" height="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xCW-O4-Rz8" firstAttribute="centerX" secondItem="EmH-Zy-fMA" secondAttribute="centerX" id="HLS-rl-HRP"/>
+                                    <constraint firstItem="xCW-O4-Rz8" firstAttribute="centerY" secondItem="EmH-Zy-fMA" secondAttribute="centerY" constant="30" id="xRW-35-7qL"/>
+                                    <constraint firstAttribute="height" constant="123" id="znm-ho-fZ6"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhH-4m-jbc">
+                                <rect key="frame" x="250" y="520" width="100" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Seleccionar">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAceptar:" destination="Wq3-Ng-UWf" eventType="touchUpInside" id="Agk-4P-q0I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HIH-2a-ndg" firstAttribute="top" secondItem="vhH-4m-jbc" secondAttribute="bottom" constant="51" id="0Cg-eq-Zjn"/>
+                            <constraint firstItem="J3R-W3-FBg" firstAttribute="centerX" secondItem="Hsd-oz-Cpo" secondAttribute="centerX" id="6o4-cR-foJ"/>
+                            <constraint firstItem="cFq-Lz-ovW" firstAttribute="centerX" secondItem="Hsd-oz-Cpo" secondAttribute="centerX" id="A3y-Rr-IGq"/>
+                            <constraint firstItem="EmH-Zy-fMA" firstAttribute="centerX" secondItem="Hsd-oz-Cpo" secondAttribute="centerX" id="LdT-BR-YFG"/>
+                            <constraint firstItem="vhH-4m-jbc" firstAttribute="centerX" secondItem="Hsd-oz-Cpo" secondAttribute="centerX" id="Qcg-1l-P9Y"/>
+                            <constraint firstItem="cFq-Lz-ovW" firstAttribute="centerY" secondItem="Hsd-oz-Cpo" secondAttribute="centerY" id="bB0-RA-cgM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cFq-Lz-ovW" secondAttribute="trailing" constant="-20" id="kpY-Dk-COf"/>
+                            <constraint firstItem="EmH-Zy-fMA" firstAttribute="leading" secondItem="Hsd-oz-Cpo" secondAttribute="leading" id="nrq-tr-SPk"/>
+                            <constraint firstItem="J3R-W3-FBg" firstAttribute="top" secondItem="9Bi-4c-46L" secondAttribute="bottom" constant="31" id="pVB-6c-zUd"/>
+                            <constraint firstItem="cFq-Lz-ovW" firstAttribute="leading" secondItem="Hsd-oz-Cpo" secondAttribute="leadingMargin" constant="-20" id="pcX-6A-jaR"/>
+                            <constraint firstItem="EmH-Zy-fMA" firstAttribute="top" secondItem="Hsd-oz-Cpo" secondAttribute="top" id="t3w-fR-ZXq"/>
+                            <constraint firstAttribute="trailing" secondItem="EmH-Zy-fMA" secondAttribute="trailing" id="z3I-jz-2dm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelTamano" destination="xCW-O4-Rz8" id="HFb-eg-GeB"/>
+                        <outlet property="tamanoSelector" destination="cFq-Lz-ovW" id="X2n-Dh-L0h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dib-3X-qcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2047" y="-415"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1455004494_Chef-2" width="128" height="128"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+</document>
